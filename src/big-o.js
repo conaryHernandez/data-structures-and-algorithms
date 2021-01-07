@@ -82,3 +82,50 @@ function anotherFunChallenge(input) {
 }
 
 // Notation: 4 + n + n + n + n + n + n + n = O(4 + 7n)
+
+function printFirstItemThenFirstHalfThenSayHi100Times(items) {
+  console.log(items[0]);
+
+  var middleIndex = Math.floor(items.length / 2);
+  var index = 0;
+
+  while (index < middleIndex) {
+    console.log(items[index]);
+    index++;
+  }
+
+  for (var i = 0; i < 100; i++) {
+    console.log('hi');
+  }
+}
+
+// Notation: O(n)
+
+const pairs = ['a', 'b', 'c', 'd', 'e'];
+function logAllPairsOfArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(array[i], array[j]);
+    }
+  }
+}
+
+logAllPairsOfArray(pairs);
+
+//#5 Space complexity O(1)
+function boooo(n) {
+  for (let i = 0; i < n; i++) {
+    console.log('booooo');
+  }
+}
+
+// #6 Space complexity O(n)
+function arrayOfHiNTimes(n) {
+  var hiArray = [];
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = 'hi';
+  }
+  return hiArray;
+}
+
+arrayOfHiNTimes(6);
