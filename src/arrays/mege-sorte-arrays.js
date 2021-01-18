@@ -28,3 +28,9 @@ function mergeSortedArrays(array1, array2) {
 }
 
 mergeSortedArrays([0, 3, 4, 31], [3, 4, 6, 30]);
+
+const mergeSortedArrays2 = (arr1, arr2) => {
+  return [...arr1, ...arr2].sort((a, b) => Number(a) > Number(b));
+};
+
+console.log(mergeSortedArrays2([0, 3, 4, 31], [3, 4, 6, 30]));
